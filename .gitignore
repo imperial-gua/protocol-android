@@ -15,4 +15,4 @@
 local.properties
 .idea
 protocol/build
-
+protocol/.cxx

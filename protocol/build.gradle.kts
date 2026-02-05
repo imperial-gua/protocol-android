@@ -4,11 +4,7 @@ plugins {
 
 android {
     namespace = "org.gua.protocol"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 29
@@ -17,20 +13,15 @@ android {
             abiFilters.addAll(listOf("arm64-v8a", "armeabi-v7a" , "x86_64"))
         }
 
-        ndkVersion = "28.2.13676358"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
 
-    buildFeatures {
-        prefabPublishing = true
-    }
-
     externalNativeBuild {
         cmake {
             path = file("jni/CMakeLists.txt")
-            version = "4.1.2"
+            version = "3.22.1"
         }
     }
 
