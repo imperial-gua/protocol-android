@@ -24,3 +24,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "protocol-android"
 include(":app")
+include(":protocol")
